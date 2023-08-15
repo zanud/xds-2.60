@@ -12,7 +12,7 @@ DEFINITION MODULE ["StdCall"] IMM;
 (**********************************************************************)
 
 IMPORT SYSTEM;
-FROM WinDef IMPORT DWORD, BOOL, UINT, LONG, PVOID, LPCVOID,
+FROM WinDef IMPORT DWORD, BOOL, UINT, LONG, PVOID, LPCVOID, 
                    WCHAR, PSTR, PWSTR, PCSTR, PCWSTR,
                    POINT, PPOINT, RECT, HKL, HWND, LPARAM, WPARAM, LRESULT;
 FROM WinGDI IMPORT LOGFONTA, LOGFONTW, PLOGFONTA, PLOGFONTW;
@@ -519,7 +519,7 @@ PROCEDURE ImmEnumRegisterWordA (hkl : HKL;
                                 Register : PCSTR; (* NIL *)
                                 pData : PVOID) : UINT;
 
-PROCEDURE ImmEnumRegisterWordW (hkl : HKL;
+PROCEDURE ImmEnumRegisterWorWA (hkl : HKL;
                                 EnumProc : REGISTERWORDENUMPROCW;
                                 Reading  : PCWSTR; (* NIL *)
                                 Style : IME_REGWORD_STYLE_TYPE;
@@ -692,3 +692,4 @@ CONST SOFTKEYBOARD_TYPE_C1            = 0002h;
 
 
 END IMM.
+
